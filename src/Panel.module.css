@@ -1,0 +1,6 @@
+.panel {
+  grid-column: 2/3;
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
