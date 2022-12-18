@@ -1,44 +1,30 @@
-.step1,
-.step2 {
+.step3 {
   width: 72%;
   height: 85%;
   position: relative;
 }
-.step1 p,
-.step2 p {
+.step3 > p {
   margin: 10px 0 10px 0;
   color: var(--Cool-gray);
 }
-.tiles {
+.box {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin: 20px 0;
-}
-.tile {
-  height: 100%;
-  border: 1px solid var(--Light-gray);
-  padding: 20px 0 20px 10px;
-  margin: 5px;
-  cursor: pointer;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--Light-gray);
+  margin-bottom: 5px;
+  padding: 10px;
 }
-.tile:focus {
-  border-color: var(--Purplish-blue);
+.box:hover {
+  border: 1px solid var(--Purplish-blue);
 }
-.tile__info {
-  text-align: left;
+.box__sub {
+  display: flex;
 }
-.switch {
-  width: 100%;
-  text-align: center;
+.box__sub > div {
+  margin-left: 10px;
 }
-.switch p {
-  font-weight: 900;
-}
-
 .right__button {
   position: absolute;
   bottom: 0;

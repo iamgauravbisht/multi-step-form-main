@@ -5,6 +5,7 @@
 }
 .step1 p {
   margin: 10px 0 10px 0;
+  color: var(--Cool-gray);
 }
 .step1 input {
   display: block;

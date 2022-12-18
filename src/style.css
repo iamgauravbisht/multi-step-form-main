@@ -1,3 +1,25 @@
+:root {
+  /* Primary */
+
+  --Marine-blue: hsl(213, 96%, 18%);
+  --Purplish-blue: hsl(243, 100%, 62%);
+  --Pastel-blue: hsl(228, 100%, 84%);
+  --Light-blue: hsl(206, 94%, 87%);
+  --Strawberry-red: hsl(354, 84%, 57%);
+
+  /* Neutral */
+
+  --Cool-gray: rgb(150, 153, 171);
+  --Light-gray: rgb(214, 217, 230);
+  --Magnolia: rgb(240, 246, 255);
+  --Alabaster: rgb(250, 251, 255);
+  --White: rgb(255, 255, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   width: 100vw;
   height: 100vh;
