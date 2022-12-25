@@ -1,34 +1,38 @@
 import React from "react";
-import "./Step2.css";
+import arcade from "./assets/images/icon-arcade.svg";
+import advanced from "./assets/images/icon-advanced.svg";
+import pro from "./assets/images/icon-pro.svg";
 
-export default function Step2() {
+export default function Step2(props) {
+  const { nextPage, prevPage } = props;
+
   const content = [
     {
-      url: "./assets/images/icon-arcade.svg",
+      svg: arcade,
       title: "Arcade",
       price: "$9/mo",
     },
     {
-      url: "./assets/images/icon-advanced.svg",
+      svg: advanced,
       title: "Advanced",
       price: "$12/mo",
     },
     {
-      url: "./assets/images/icon-pro.svg",
+      svg: pro,
       title: "Pro",
       price: "$15/mo",
     },
   ];
   return (
-    <div class="step2">
+    <div className="step2">
       <h2>Select your plan</h2>
       <p>You have the option of monthly or yearly billing.</p>
-      <div class="tiles">
+      <div className="tiles">
         {content.map((item) => {
           return (
-            <button class="tile">
-              <img src={item.url} alt="" srcset="" />
-              <div class="tile__info">
+            <button className="tile">
+              <img src={item.svg} alt="" />
+              <div className="tile__info">
                 <h4>{item.title}</h4>
                 <p>{item.price}</p>
               </div>
@@ -36,20 +40,22 @@ export default function Step2() {
           );
         })}
       </div>
-      <div class="switch">
+      <div className="switch">
         <p>
           Monthly
-          <label class="switch">
+          <label className="switch">
             <input type="checkbox" />
-            <span class="slider round"></span>
+            <span className="slider round"></span>
           </label>
           Yearly
         </p>
       </div>
 
-      <button class="left__button">Go Back</button>
-      <button class="right__button" type="submit">
-        Next
+      <button className="left__button" onClick={prevPage}>
+        Go Back
+      </button>
+      <button className="right__button" type="submit" onClick={nextPage}>
+        Next Step
       </button>
     </div>
   );

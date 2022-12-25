@@ -1,5 +1,4 @@
 import React from "react";
-import "./Step5.css";
 import img from "./assets/images/icon-thank-you.svg";
 
 export default function Step5() {

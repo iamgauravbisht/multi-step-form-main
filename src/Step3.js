@@ -1,7 +1,8 @@
 import React from "react";
-import "./Step3.css";
 
-export default function Step3() {
+export default function Step3(props) {
+  const { nextPage, prevPage } = props;
+
   const content = [
     {
       h4: "Online service",
@@ -22,7 +23,7 @@ export default function Step3() {
   return (
     <div className="step3">
       <h2>Pick add-ons</h2>
-      <p className="margin-top">Add-ons help enhance your gaming experience.</p>
+      <p>Add-ons help enhance your gaming experience.</p>
       {content.map((item) => {
         return (
           <div className="box">
@@ -38,8 +39,10 @@ export default function Step3() {
           </div>
         );
       })}
-      <button className="left__button">Go Back</button>
-      <button className="right__button" type="submit">
+      <button className="left__button" onClick={prevPage}>
+        Go Back
+      </button>
+      <button className="right__button" type="submit" onClick={nextPage}>
         Next Step
       </button>
     </div>

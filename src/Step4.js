@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import "./Step4.css";
 
-export default function Step4() {
+export default function Step4(props) {
+  const { nextPage, prevPage } = props;
+
   const content = [
     {
       text: "Online service",
@@ -76,19 +77,12 @@ export default function Step4() {
           </h3>
         </div>
       </div>
-      <button className="left__button">Go Back</button>
-      <button className="right__button" type="submit">
+      <button className="left__button" onClick={prevPage}>
+        Go Back
+      </button>
+      <button className="right__button" type="submit" onClick={nextPage}>
         Confirm
       </button>
     </div>
   );
 }
-//       <!-- Step 4 start -->
-
-//       <!-- Finishing up Double-check everything looks OK before confirming. -->
-
-//       <!-- Dynamically add subscription and add-on selections here -->
-
-//       <!-- Total (per month/year) Go Back Confirm -->
-
-//       <!-- Step 4 end -->
