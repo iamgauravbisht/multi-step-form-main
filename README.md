@@ -1,4 +1,4 @@
-# Frontend Mentor - Multi-step form
+# Multi-step form
 
 ## Welcome! 👋
 
